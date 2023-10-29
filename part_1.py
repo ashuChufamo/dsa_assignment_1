@@ -106,16 +106,16 @@ if __name__ == "__main__":
         start_time = timeit.default_timer()
         merge_sort(array)
         end_time = timeit.default_timer()
-        merge_sort_timeElapsed.append((end_time - start_time) * 100000)
+        merge_sort_timeElapsed.append((end_time - start_time) * 1000)
     
     # Plot the random list time elapsed
     plt.figure(1)
-    plt.title('Comparison of Sorting Algorithms Time Elapse with Different Length of Random Lists')
+    plt.title('Sorting Algorithms Time Elapse vs Different Length of Random Lists')
     plt.plot(lengths, insertion_sort_timeElapsed, label='Insertion Sort (ms)', marker='o', markersize=10)
     plt.plot(lengths, quick_sort_timeElapsed, label='Quick Sort (ms)', marker='o', markersize=10)
-    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (100ms)', marker='o', markersize=10)
+    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (ms)', marker='o', markersize=10)
     plt.xlabel('Length of List')
-    plt.ylabel('Number of Operations')
+    plt.ylabel('Time Elapsed')
     plt.legend()
     
     # Clean the lists
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         start_time = timeit.default_timer()
         insertion_sort(array)
         end_time = timeit.default_timer()
-        insertion_sort_timeElapsed.append((end_time - start_time) * 1000000)
+        insertion_sort_timeElapsed.append((end_time - start_time) * 1000)
         start_time = timeit.default_timer()
         quick_sort(array)
         end_time = timeit.default_timer()
@@ -136,16 +136,16 @@ if __name__ == "__main__":
         start_time = timeit.default_timer()
         merge_sort(array)
         end_time = timeit.default_timer()
-        merge_sort_timeElapsed.append((end_time - start_time) * 100000)
+        merge_sort_timeElapsed.append((end_time - start_time) * 1000)
 
     # Plot the ascending list time elapsed
     plt.figure(2)
-    plt.title('Comparison of Sorting Algorithms Time Elapse with Different Length of Ascending Lists')
-    plt.plot(lengths, insertion_sort_timeElapsed, label='Insertion Sort (µs)', marker='o', markersize=10)
+    plt.title('Sorting Algorithms Time Elapse vs Different Length of Ascending Lists')
+    plt.plot(lengths, insertion_sort_timeElapsed, label='Insertion Sort (ms)', marker='o', markersize=10)
     plt.plot(lengths, quick_sort_timeElapsed, label='Quick Sort (ms)', marker='o', markersize=10)
-    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (100ms)', marker='o', markersize=10)
+    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (ms)', marker='o', markersize=10)
     plt.xlabel('Length of List')
-    plt.ylabel('Number of Operations')
+    plt.ylabel('Time Elapsed')
     plt.legend()
     
     # Clean the lists
@@ -166,16 +166,16 @@ if __name__ == "__main__":
         start_time = timeit.default_timer()
         merge_sort(array)
         end_time = timeit.default_timer()
-        merge_sort_timeElapsed.append((end_time - start_time) * 100000)
+        merge_sort_timeElapsed.append((end_time - start_time) * 1000)
         
     # Plot the descending list time elapsed
     plt.figure(3)
-    plt.title('Comparison of Sorting Algorithms Time Elapse with Different Length of Descending Lists')
+    plt.title('Sorting Algorithms Time Elapse vs Different Length of Descending Lists')
     plt.plot(lengths, insertion_sort_timeElapsed, label='Insertion Sort (ms)', marker='o', markersize=10)
     plt.plot(lengths, quick_sort_timeElapsed, label='Quick Sort (ms)', marker='o', markersize=10)
-    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (100ms)', marker='o', markersize=10)
+    plt.plot(lengths, merge_sort_timeElapsed, label='Merge Sort (ms)', marker='o', markersize=10)
     plt.xlabel('Length of List')
-    plt.ylabel('Number of Operations')
+    plt.ylabel('Time Elapsed')
     plt.legend()
 
     # Show the plots

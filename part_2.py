@@ -129,16 +129,16 @@ if __name__ == "__main__":
         
     #Count the operations for each sorting algorithm for random lists
     for array in random_number_list:
-        insertion_sort_counts.append(insertion_sort(array))
-        quick_sort_counts.append(quick_sort(array))
+        insertion_sort_counts.append(insertion_sort(array)/1000)
+        quick_sort_counts.append(quick_sort(array)/1000)
         merge_sort_counts.append(merge_sort(array))    
     
     # Plot the random list count of operations
     plt.figure(1)
-    plt.title('Comparison of Sorting Algorithms with Different Length of Random Lists')
-    plt.plot(lengths, insertion_sort_counts, label='Insertion Sort', marker='o', markersize=10)
-    plt.plot(lengths, quick_sort_counts, label='Quick Sort', marker='o', markersize=10)
-    plt.plot(lengths, merge_sort_counts, label='Merge Sort', marker='o', markersize=10)
+    plt.title('Sorting Algorithms Number of Operations vs Different Length of Random Lists')
+    plt.plot(lengths, insertion_sort_counts, label='Insertion Sort (1000)', marker='o', markersize=10)
+    plt.plot(lengths, quick_sort_counts, label='Quick Sort (1000)', marker='o', markersize=10)
+    plt.plot(lengths, merge_sort_counts, label='Merge Sort ', marker='o', markersize=10)
     plt.xlabel('Length of List')
     plt.ylabel('Number of Operations')
     plt.legend()
@@ -151,14 +151,14 @@ if __name__ == "__main__":
     # Count the operations for each sorting algorithm for ascending lists
     for array in ascending_number_list:
         insertion_sort_counts.append(insertion_sort(array))
-        quick_sort_counts.append(quick_sort(array))
+        quick_sort_counts.append(quick_sort(array)/1000)
         merge_sort_counts.append(merge_sort(array))    
 
     # Plot the ascending list count of operations
     plt.figure(2)
-    plt.title('Comparison of Sorting Algorithms with Different Length of Ascending Lists')
+    plt.title('Sorting Algorithms Number of Operations vs Different Length of Ascending Lists')
     plt.plot(lengths, insertion_sort_counts, label='Insertion Sort', marker='o', markersize=10)
-    plt.plot(lengths, quick_sort_counts, label='Quick Sort', marker='o', markersize=10)
+    plt.plot(lengths, quick_sort_counts, label='Quick Sort (1000)', marker='o', markersize=10)
     plt.plot(lengths, merge_sort_counts, label='Merge Sort', marker='o', markersize=10)
     plt.xlabel('Length of List')
     plt.ylabel('Number of Operations')
@@ -171,15 +171,15 @@ if __name__ == "__main__":
     
     # Count the operations for each sorting algorithm for descending lists
     for array in descending_number_list:
-        insertion_sort_counts.append(insertion_sort(array))
-        quick_sort_counts.append(quick_sort(array))
+        insertion_sort_counts.append(insertion_sort(array)/1000)
+        quick_sort_counts.append(quick_sort(array)/1000)
         merge_sort_counts.append(merge_sort(array))   
 
     # Plot the descending list count of operations
     plt.figure(3)
-    plt.title('Comparison of Sorting Algorithms with Different Length of Descending Lists')
-    plt.plot(lengths, insertion_sort_counts, label='Insertion Sort', marker='o', markersize=10)
-    plt.plot(lengths, quick_sort_counts, label='Quick Sort', marker='o', markersize=10)
+    plt.title('Sorting Algorithms Number of Operations vs Different Length of Descending Lists')
+    plt.plot(lengths, insertion_sort_counts, label='Insertion Sort (1000)', marker='o', markersize=10)
+    plt.plot(lengths, quick_sort_counts, label='Quick Sort (1000)', marker='o', markersize=10)
     plt.plot(lengths, merge_sort_counts, label='Merge Sort', marker='o', markersize=10)
     plt.xlabel('Length of List')
     plt.ylabel('Number of Operations')
